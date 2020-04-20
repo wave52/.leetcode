@@ -16,6 +16,6 @@
  * @return {boolean}
  */
 var hasCycle = function(head) {
-    
+
 };
 

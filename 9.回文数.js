@@ -8,16 +8,11 @@
  * @return {boolean}
  */
 var isPalindrome = function(x) {
-  function t(num) {
-    const s = num.toString();
-    let flag = true;
-    for (let i = 0; i <= Math.floor(s.length / 2) - 1; i++) {
-      if (s.charAt(i) !== s.charAt(s.length - 1 - i)) {
-        flag = false;
-      }
+  const str = `${x}`;
+  for (let i = 0; i < Math.floor(str.length / 2); i++) {
+    if (str[i] !== str[str.length - 1 - i]) {
+      return false;
     }
-    return flag;
   }
-  if (x < 0) return false;
-  return t(x);
+  return true;
 };
