@@ -36,15 +36,15 @@ var kthSmallest = function (matrix, k) {
 
   let left = matrix[0][0];
   let right = matrix[n - 1][n - 1];
-  while (left < right) {
+  while (left <= right) {
     let mid = left + Math.floor((right - left) / 2)
     const num = getNum(matrix, k, mid);
     if (num < k) {
       left = mid + 1;
     } else if (num > k) {
-      right = mid;
+      right = mid - 1;
     } else if (num === k) {
-      right = mid;
+      right = mid - 1;
     }
   }
 
